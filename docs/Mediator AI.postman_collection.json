@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "6cf766cc-b046-428b-b987-0380e26c84d7",
+		"name": "Mediator AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7496065"
+	},
+	"item": [
+		{
+			"name": "mediators",
+			"item": [
+				{
+					"name": "Mediator - Fetch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/mediatorai/mediator/fetch/M10006",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"mediator",
+								"fetch",
+								"M10006"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mediator - Fetch All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/mediatorai/mediator/fetch/all",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"mediator",
+								"fetch",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mediator - Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Deepu Chandran\",\r\n    \"mobile\" : \"9447020535\",\r\n    \"email\" : \"hello@aravind.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/mediator/add",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"mediator",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mediator - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Sukanya Vijayan\",\r\n    \"mobile\" : \"9447020535\",\r\n    \"email\" : \"hello@aravind.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/mediator/update/M10006",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"mediator",
+								"update",
+								"M10006"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cases",
+			"item": [
+				{
+					"name": "Cases - Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"summary\" : \"Some case summary\",\r\n    \"role\" : \"petitioner\",\r\n    \"mediator_id\" : \"M10001\",\r\n    \"closed_on\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/add",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cases - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"case_id\" : null,\r\n    \"summary\" : \"Some case summary\",\r\n    \"mediator_id\" : \"M10001\",\r\n    \"closed_on\" : null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/update/C0000003",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"update",
+								"C0000003"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parties",
+			"item": [
+				{
+					"name": "Parties - Fetch All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/C0000003/parties/fetch",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"C0000003",
+								"parties",
+								"fetch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Parties - Fetch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/C0000003/parties/fetch/C0000003-P010",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"C0000003",
+								"parties",
+								"fetch",
+								"C0000003-P010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party - Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Aravind Ramachandran Pillai\",\r\n    \"mobile\" : \"9447020535\",\r\n    \"email\" : \"hello@aravind.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/C0000003/parties/add",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"C0000003",
+								"parties",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party - Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Aravind R Pillai\",\r\n    \"role\" : \"petitioner\",\r\n    \"mobile\" : \"4168547092\",\r\n    \"email\" : \"hello@aravind.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/C0000003/parties/update/C0000003-P010",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"C0000003",
+								"parties",
+								"update",
+								"C0000003-P010"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "conversations",
+			"item": [
+				{
+					"name": "Conversation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_message\" : \"Hey i needs some assistance\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/cases/C0000003/parties/C0000003-P001/conversation",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"cases",
+								"C0000003",
+								"parties",
+								"C0000003-P001",
+								"conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stage Conversation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fingerprint\" : \"31791486-3fdb-4f1f-bccc-59ebc884c197\",\r\n    \"user_message\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/stage/conversation/31791486-3fdb-4f1f-bccc-59ebc884c197",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"stage",
+								"conversation",
+								"31791486-3fdb-4f1f-bccc-59ebc884c197"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stage Conversation 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fingerprint\" : \"4040bdd2-80df-40d0-a0bb-54d7300424ba\",\r\n    \"user_message\" : \"User input 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/stage/conversation",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"stage",
+								"conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Staged Conversations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fingerprint\" : \"9c7ef264-7d8f-4ff2-9a92-14bfc81fee29\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/mediatorai/stage/conversation/show/c70290f8-632e-422c-844d-1e66e8ae6a0c",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"mediatorai",
+								"stage",
+								"conversation",
+								"show",
+								"c70290f8-632e-422c-844d-1e66e8ae6a0c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8000"
+		}
+	]
+}

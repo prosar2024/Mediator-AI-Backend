@@ -48,7 +48,8 @@ def index(request, conversation_id = None):
         dict = {
             'conversation_id' : converstion_stage.conversation_id,
             'fingerprint' : converstion_stage.system_fingerprint,
-            'message' : ai_message
+            'message' : ai_message,
+            'request_fileupload' : True if user_message.__contains__("file") else False
         }
         return HttpUtil.respond(200, None, dict)
         

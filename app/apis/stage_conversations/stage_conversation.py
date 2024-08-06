@@ -49,9 +49,9 @@ def index(request, conversation_id = None):
             'conversation_id' : converstion_stage.conversation_id,
             'fingerprint' : converstion_stage.system_fingerprint,
             'message' : ai_message,
-            'request_fileupload' : True if user_message.__contains__("file") else False
+            'request_fileupload' : True if user_message != None and user_message.__contains__("file") else False
         }
         return HttpUtil.respond(200, None, dict)
         
-    except Exception as e0: 
+    except Exception as e0:
         return HttpUtil.respond(400, str(e0))

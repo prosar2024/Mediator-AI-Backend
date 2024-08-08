@@ -10,6 +10,7 @@ from app.apis.conversations.converse import index as handle_conversation
 from app.apis.stage_conversations.stage_conversation import index as stage_conversation
 from app.apis.stage_conversations.show_conversations import index as show_conversation
 from app.apis.stage_conversations.staged_file_upload import index as staged_file_upload
+from app.apis.stage_conversations.notify_file_upload_completion import index as notify_file_upload_completion
 
 
 urlpatterns = [
@@ -43,4 +44,5 @@ urlpatterns = [
     path(r'stage/conversation/', stage_conversation, name="URL to stage a conversation with the AI"),
     path(r'stage/conversation/show/<str:conversation_id>', show_conversation, name="URL to show the conversation hostory"),
     path(r'stage/conversation/fileupload/<str:conversation_id>', staged_file_upload, name="URL to upload file"),
+    path(r'stage/conversation/fileupload/notifycompletion/<str:conversation_id>', notify_file_upload_completion, name="URL to notify file upload completion"),
 ]

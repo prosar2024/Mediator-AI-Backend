@@ -1,4 +1,5 @@
 from .conversation_staging import ConversationStaging
+from .files_staging import FilesStaging
 
 from .mediators import Mediators
 

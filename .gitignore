@@ -1,0 +1,5 @@
+
+/media
+*.pyc
+*.pyc
+/mediatorai/__pycache__
